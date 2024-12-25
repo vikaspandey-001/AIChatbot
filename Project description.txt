@@ -1,0 +1,88 @@
+Overview
+This AI chatbot is an interactive assistant capable of performing various tasks such as answering queries, playing music, opening applications, fetching information from Wikipedia, and utilizing GPT-based responses for detailed answers. It's built using Python and leverages multiple libraries to provide a seamless user experience.
+
+Features
+Speech Recognition and Response:
+
+Listens to user commands via the microphone.
+Responds using a text-to-speech engine.
+Intelligent Query Handling:
+
+Wikipedia integration for quick information retrieval.
+OpenAI GPT-powered detailed responses.
+System Operations:
+
+Opens frequently used applications like VS Code, browsers, command prompts, etc.
+Manages music playback with options to play, pause, stop, and switch songs.
+Web Browsing:
+
+Opens specified websites directly in a browser.
+Time Management:
+
+Provides the current time upon request.
+WhatsApp Messaging:
+
+Sends messages using the pywhatkit library.
+Custom Greetings:
+
+Greets the user based on the time of day.
+Technologies Used
+Python Libraries:
+
+pyttsx3 for text-to-speech conversion.
+speech_recognition for voice recognition.
+wikipedia for fetching summarized information.
+openai for GPT-3 integration.
+webbrowser for opening URLs.
+pygame.mixer for music playback.
+pywhatkit for WhatsApp messaging.
+cv2 for computer vision tasks (optional, not fully utilized).
+API: Chat GPT
+
+OpenAI API for intelligent conversational responses.
+Setup Instructions
+Prerequisites:
+
+Python 3.x installed on your system.
+Install required libraries using: requirements.txt
+Set Up OpenAI API Key:
+
+Replace the openai.api_key value in the script with your OpenAI API key.
+Music Directory:
+
+Update the music_dir path in the play_music class to point to your local music folder.
+WhatsApp Configuration:
+
+Ensure the phone number in the pywhatkit.sendwhatmsg function is valid and formatted correctly.
+
+How to Run
+Save the script as ai_chatbot.py.
+Run the script using:
+python ai_chatbot.py
+Interact with the chatbot by giving voice commands like:
+"Wish me"
+"Search for Python on Wikipedia"
+"Open YouTube in browser"
+"Play song"
+"What's the time?"
+Voice Commands
+Command	Action
+"Wish me"	Greets the user based on the time of day.
+"Wikipedia <topic>"	Fetches a summary of the topic from Wikipedia.
+"Jarvis <query>"	Searches the query using GPT-3.
+"Play song"	Plays a random song from the specified music directory.
+"Pause song"	Pauses the currently playing song.
+"Stop song"	Stops the music playback.
+"Open <application>"	Opens the specified application or file.
+"Time"	Provides the current system time.
+"Send WhatsApp message"	Sends a pre-configured message via WhatsApp.
+"Exit"	Exits the program gracefully.
+Customization
+Update the app_path variables to include the paths of your preferred applications.
+Modify the voice in pyttsx3 settings by changing the voices[1].id.
+Future Improvements
+Enhance error handling for unsupported queries.
+Add support for more applications and commands.
+Implement natural language understanding for better interaction.
+
+This project is licenced and cannot be used for commercial purpose, Licensed to Vikas Pandey
